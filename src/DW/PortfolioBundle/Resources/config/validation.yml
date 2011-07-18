@@ -1,0 +1,10 @@
+DW\PortfolioBundle\Entity\Enquiry:
+    properties:
+        name:
+            - NotBlank: ~
+        email:
+            - NotBlank: ~
+            - Email: durrrrr
+        telephone: ~
+        message:
+            - NotBlank: ~
