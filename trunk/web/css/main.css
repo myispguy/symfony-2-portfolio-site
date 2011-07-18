@@ -4,7 +4,7 @@
 }
 
 html {
-  background: #222222;
+  background: #000000;
   color: #FFFFFF;
   font: 70%/1.4em Arial,Helvetica,sans-serif;
   text-align: center;
@@ -17,13 +17,36 @@ a:visited {
 }
 
 #container {
-  padding: 20px 0;
+  background: transparent url(../images/bg.gif) no-repeat scroll top center;
+  height: 400px;
+  padding: 200px 0 0;
 }
 
+#summary {
+	display: block;
+	margin: 40px 0;
+}
+	#summary ul {
+		font-size: 1.3em;
+		line-height: 1.3em;
+		overflow: hidden;
+	}
+		#summary ul li {
+			background: transparent url(../images/bullet.png) no-repeat scroll center right;
+			display: inline;
+			margin: 0 20px 0 0;
+			padding: 0 27px 0 0;
+		}
+		#summary ul li.last {
+			background: none;
+			padding: 0;
+			margin: 0;
+		}
+
 #logo {
-  background: transparent url(../images/logo.jpg) no-repeat scroll center center;
+  background: transparent url(../images/logo.png) no-repeat scroll center center;
   height: 46px;
-  margin: 0 auto;
+  margin: 0 auto 10px;
   width: 250px;
 }
   #logo a {
@@ -56,10 +79,10 @@ a:visited {
     }
     #footer ul.social li.google-plus {
      background: transparent url(../images/google-plus.png) no-repeat scroll 0 0;
+     margin: 0;
     }
     #footer ul.social li.twitter {
      background: transparent url(../images/twitter.png) no-repeat scroll 0 0;
-      margin: 0;
     }
       #footer ul.social li a {
         display: block;
@@ -70,4 +93,23 @@ a:visited {
           display: block;
           text-indent: -9999px;
         }
+
+#base-links {
+	color: #545454;
+	padding: 10px 0 0;
+}
+	#base-links ul {
+		display: block;
+	}
+		#base-links ul li {
+			border-right: solid 1px #545454;
+			display: inline;
+			margin: 0 10px 0 0;
+			padding: 0 10px 0 0;
+		}
+		#base-links ul li.last {
+			border-right: 0;
+			margin: 0;
+			padding: 0;	
+		}
 
