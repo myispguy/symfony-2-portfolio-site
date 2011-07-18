@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: #222222;
+  color: #FFFFFF;
+  font: 70%/1.4em Arial,Helvetica,sans-serif;
+  text-align: center;
+}
+
+a:link,
+a:visited {
+  color: #545454;
+  text-decoration: underline;
+}
+
+#container {
+  padding: 20px 0;
+}
+
+#logo {
+  background: transparent url(../images/logo.jpg) no-repeat scroll center center;
+  height: 46px;
+  margin: 0 auto;
+  width: 250px;
+}
+  #logo a {
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
+    #logo a span {
+      display: block;
+      text-indent: -9999px;
+    }
+
+#footer {
+  margin: 20px 0;
+}
+  #footer ul.social {
+    list-style: none;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 116px;
+  }
+    #footer ul.social li {
+      float: left;
+      height: 32px;
+      margin: 0 10px 0 0;
+      width: 32px;
+    }
+    #footer ul.social li.facebook {
+     background: transparent url(../images/facebook.png) no-repeat scroll 0 0;
+    }
+    #footer ul.social li.google-plus {
+     background: transparent url(../images/google-plus.png) no-repeat scroll 0 0;
+    }
+    #footer ul.social li.twitter {
+     background: transparent url(../images/twitter.png) no-repeat scroll 0 0;
+      margin: 0;
+    }
+      #footer ul.social li a {
+        display: block;
+        height: 100%;
+        width: 100%;
+      }
+        #footer ul.social li a span {
+          display: block;
+          text-indent: -9999px;
+        }
+
