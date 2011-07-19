@@ -4,12 +4,11 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>{% block title %}{% endblock %} | David Walker | Freelance Web Developer, Online Innovator, Leeds, West Yorkshire</title>
 
-		<meta name="description" content="Online innovator, creating web sites and applications a cut above the rest - always focused on quality and attaining success. Yorkshire based Leeds web developer." />
-		<meta name="viewport" content = "width = device-width, initial-scale = 2.3, minimum-scale = 1, maximum-scale = 5" />
+		    <meta name="description" content="Online innovator, creating web sites and applications a cut above the rest - always focused on quality and attaining success. Yorkshire based Leeds web developer." />
         {% block stylesheets %}{% endblock %}
 
-		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
-		<script type="text/javascript" src="/js/page.js"></script>
+		    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		    <script type="text/javascript" src="/js/page.js"></script>
 
         <link rel="stylesheet" href="/css/main.css" />
         <link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
@@ -18,23 +17,25 @@
 		<div id="content">
     
 		  <div id="container">
-		    {% block body %}{% endblock %}
+        <div class="inner">
+          {% block body %}{% endblock %}
 
-		    <div id="footer">
-		      <ul class="social">
-		        <li class="facebook"><a href="http://www.facebook.com/davewalker1986" rel="external" title="Facebook"><span>Facebook</span></a></li>
-		        <li class="twitter"><a href="http://www.twitter.com/theboywalker" rel="external" title="Twitter"><span>Twitter</span></a></li>
-		        <li class="google-plus"><a href="https://plus.google.com/113133442180234524440" rel="external" title="Google plus"><span>Google plus</span></a></li>
-		      </ul>
-		    </div>
+          <div id="footer">
+            <ul class="social">
+              <li class="facebook"><a href="http://www.facebook.com/davewalker1986" rel="external" title="Facebook"><span>Facebook</span></a></li>
+              <li class="twitter"><a href="http://www.twitter.com/theboywalker" rel="external" title="Twitter"><span>Twitter</span></a></li>
+              <li class="google-plus"><a href="https://plus.google.com/113133442180234524440" rel="external" title="Google plus"><span>Google plus</span></a></li>
+            </ul>
+          </div>
 
-		    <div id="base-links">
-				<ul>
-					<li>email: <a href="mailto:hello@david-walker.net">hello@david-walker.net</a></li>
-					<li class="last">full website coming soon</li>
-				</ul>
-		    </div>
+          <div id="base-links">
+          <ul>
+            <li>email: <a href="mailto:hello@david-walker.net">hello@david-walker.net</a></li>
+            <li class="last">full website coming soon</li>
+          </ul>
+          </div>
 
+        </div>
 		  </div>
 		  {% block javascripts %}{% endblock %}
 		</div>
