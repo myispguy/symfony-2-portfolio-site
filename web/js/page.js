@@ -7,9 +7,11 @@ $(function() {
 });
 
 var positionContainer = function() {
-	var container_height = $("#container").outerHeight();
-	var window_height = $(document).height();
+  $("#container").height($(window).height());
 
-	var margin = (window_height - container_height) / 2;
-	$("#container").css("marginTop", margin);
+	var container_height = $("#container .inner").height();
+	var window_height = $(window).height();
+
+	var margin = ((window_height - container_height) / 2) - 50;
+	$("#container").css("paddingTop", margin);
 };

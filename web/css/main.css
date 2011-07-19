@@ -17,9 +17,8 @@ a:visited {
 }
 
 #container {
-  background: transparent url(../images/bg.gif) no-repeat scroll top center;
+  background: transparent url(../images/bg.gif) no-repeat scroll center center;
   height: 400px;
-  padding: 200px 0 0;
 }
 
 #summary {
