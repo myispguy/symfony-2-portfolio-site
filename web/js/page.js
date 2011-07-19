@@ -7,11 +7,11 @@ $(function() {
 });
 
 var positionContainer = function() {
-  $("#container").height($(window).height());
+  $("#container").height($(document).height());
 
 	var container_height = $("#container .inner").height();
 	var window_height = $(window).height();
 
 	var margin = (window_height - container_height) / 2;
-	$("#container").css("paddingTop", margin);
+	$("#container .inner").css({ "padding-top" : margin });
 };
