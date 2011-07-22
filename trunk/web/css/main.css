@@ -10,6 +10,10 @@ html {
   text-align: center;
 }
 
+body {
+  /*overflow: hidden;*/
+}
+
 a:link,
 a:visited {
   color: #545454;
@@ -17,9 +21,23 @@ a:visited {
 }
 
 #container {
-  background: transparent url(../images/bg.gif) no-repeat scroll center center;
-  height: 400px;
+  height: 100%;
+  width: 100%;
 }
+
+  #container .page {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+    #container .page.intro {
+      background: transparent url(../images/bg.gif) no-repeat scroll center center;
+    }
+
+    #container .page.technology {
+      background: red;
+    }
 
 #summary {
 	display: block;
