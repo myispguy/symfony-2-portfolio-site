@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  /*overflow: hidden;*/
+  height: 100%;
 }
 
 a:link,
@@ -30,16 +30,14 @@ a:visited {
     position: relative;
     width: 100%;
     height: 100%;
+    overflow: hidden;
   }
 
     #container .page .inner {
       position: absolute;
       text-align: center;
+      top: 100px;
       width: 100%;
-    }
-
-    #container .page.in-view {
-     color: blue !important;
     }
 
     #container .page.intro {
@@ -49,6 +47,15 @@ a:visited {
     #container .page.technology {
       background: #FF00FF;
     }
+      #container .page.technology .inner {
+        background: blue;
+        height: 150px;
+      }
+      
+      #container .page.contact .inner {
+        background: green;
+        height: 350px;
+      }
 
 #site-links {
   position: fixed;
