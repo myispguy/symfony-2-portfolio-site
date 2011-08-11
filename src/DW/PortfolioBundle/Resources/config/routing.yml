@@ -1,7 +1,11 @@
 PortfolioBundle_homepage:
     pattern:  /
     defaults: { _controller: PortfolioBundle:Default:index }
-    
+
+PortfolioBundle_technology:
+    pattern:  /technology/
+    defaults: { _controller: PortfolioBundle:Default:technology }
+
 PortfolioBundle_contact:
-    pattern:  /contact
+    pattern:  /contact/
     defaults: { _controller: PortfolioBundle:Contact:index }

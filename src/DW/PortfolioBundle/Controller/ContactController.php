@@ -11,6 +11,8 @@ class ContactController extends Controller
     
     public function indexAction()
     {
+        $title = "Contact";
+
         $enquiry = new Enquiry();
         $form = $this->createFormBuilder($enquiry)
           ->add("name", "text")
@@ -19,6 +21,6 @@ class ContactController extends Controller
           ->add("message", "textarea")
           ->getForm();
         
-        return $this->render('PortfolioBundle:Contact:index.html.twig', array('form' => $form->createView()));
+        return $this->render('PortfolioBundle:Contact:index.html.twig', array('page_title' => $title, 'form' => $form->createView()));
     }
 }
