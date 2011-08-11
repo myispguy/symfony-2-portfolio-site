@@ -14,4 +14,9 @@ class DefaultController extends Controller
         $title = "Welcome";
         return $this->render('PortfolioBundle:Default:index.html.twig', array('page_title' => $title));
     }
+
+    public function technologyAction() {
+        $title = "Technology";
+        return $this->render('PortfolioBundle:Default:technology.html.twig', array('page_title' => $title));
+    }
 }

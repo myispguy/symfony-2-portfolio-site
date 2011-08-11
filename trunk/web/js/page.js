@@ -10,14 +10,7 @@ $(function() {
 	positionContainer();
 	$(window).resize(positionContainer);
 	
-	$("#content").height(window_height).jScrollPane({
-        showArrows: true,
-        scrollbarWidth: 10,
-        arrowSize: 10,
-        animateDuration: 500,
-        animateScroll: true,
-        autoReinitialise: true
-  });
+	$("#content").height(window_height);
 
 	//external links
 	$("a[rel='external']").attr("target", "_blank");
@@ -27,7 +20,7 @@ $(function() {
     var target_index = $(this).parent().index();
 
     // calculate the amount to scroll
-    $("html, body").animate({scrollTop: (window_height*target_index)}, 600, "swing");
+    $("body").animate({ scrollTop: window_height*target_index}, 750);
     return false;
   });
 
@@ -36,14 +29,10 @@ $(function() {
   $(window).resize(selectWindow);
 });
 
+/** resize the windows according to window size **/
 var positionContainer = function() {
   window_height = $(window).height();
-
   $("#container .page").height(window_height);
-  $("#container .page.in-view").each(function(e, page) {
-    var margin = ($(page).parent().height() - $(page).height()) / 2;
-    $(page).css("top", margin);
-  });
 };
 
 /** monitor the page scroll **/
@@ -97,13 +86,14 @@ var newPos = function(self, scroll, speed) {
 
   // work out distance from top of page for the in-view page
   var top_distance = pos_y * ratio;
+  var top_y = 100;
 
   if (top_distance < 100) {
-    var top_y = 100;
+    top_y = 100;
   } else if (top_distance > (window_height - 100)) {
-    var top_y = (window_height - 100);
+    top_y = (window_height - 100);
   } else {
-    var top_y = top_distance * speed;
+    top_y = top_distance * speed;
   }
 
   var distance_from_top = window_height - $(window).scrollTop();

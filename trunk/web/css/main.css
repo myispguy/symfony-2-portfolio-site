@@ -45,25 +45,39 @@ a:visited {
     }
 
     #container .page.technology {
-      background: #FF00FF;
+      background: green;
     }
-      #container .page.technology .inner {
-        background: blue;
-        height: 150px;
-      }
-      
-      #container .page.contact .inner {
-        background: green;
-        height: 350px;
-      }
+
+    #container .page.contact {
+      background: blue;
+    }
 
 #site-links {
+  background: #333333;
   position: fixed;
-  bottom: 0;
-  padding: 10px 15px 10px 20px;
+  top: -30px;
+  padding: 10px 15px 0px 20px;
   right: 0;
-  border: solid 1px red;
+  -webkit-transition: top 0.15s ease-in-out;
+	-moz-transition: top 0.15s ease-in-out;
+	-o-transition: top 0.15s ease-in-out;
+	-ms-transition: top 0.15s ease-in-out;
+	transition: top 0.15s ease-in-out;
+  box-shadow: 0 0 10px #FFFFFF;
+  border-radius: 0 0 0 7px;
 }
+#site-links:hover {
+  top: 0;
+}
+
+  #site-links .menu-link {
+    color: #FFFFFF;
+    display: block;
+    font-family: Georgia;
+    font-size: 1.2em;
+    padding: 10px;
+  }
+
   #site-links ul {
     list-style: none;
     overflow: hidden;
