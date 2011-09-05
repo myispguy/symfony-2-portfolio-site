@@ -18,15 +18,21 @@ $(function() {
   $("#site-links ul li a").click(function() {
     // find out which window this should be linking to
     var target_index = $(this).parent().index();
-
+    
     // calculate the amount to scroll
-    $("body").animate({ scrollTop: window_height*target_index}, 750);
+    $("body, html").animate({ scrollTop: window_height*target_index}, 750);
     return false;
   });
 
   selectWindow();
   $(window).scroll(selectWindow);
   $(window).resize(selectWindow);
+
+  $("form").live("submit", function(e) {
+    e.preventDefault();
+    alert("submit");
+    return false;
+  });
 });
 
 /** resize the windows according to window size **/
@@ -43,6 +49,10 @@ var selectWindow = function() {
   window_position = $(window).scrollTop();
   var selected_window = Math.round(window_position / window_height) + 1;
   current_screen = selected_window;
+
+  // sort out menu links positioning
+  var leftMargin = ($(window).width() - $("#site-links").width()) / 2;
+  $("#site-links").css("left", leftMargin);
 
   // set selected state on mini-menu
   var selected_item = $("#site-links ul li:nth-child("+selected_window+")");
@@ -61,7 +71,6 @@ var selectWindow = function() {
       $(page).children(".inner:first").css("top", window_height);
     }
   });
-  
 };
 
 var newPos = function(self, scroll, speed) {

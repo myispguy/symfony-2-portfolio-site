@@ -4,7 +4,7 @@ PortfolioBundle_homepage:
 
 PortfolioBundle_technology:
     pattern:  /technology/
-    defaults: { _controller: PortfolioBundle:Default:technology }
+    defaults: { _controller: PortfolioBundle:Technology:index }
 
 PortfolioBundle_contact:
     pattern:  /contact/
