@@ -53,23 +53,12 @@ a:visited {
     }
 
 #site-links {
-  background: #333333;
+  background: red;
   position: fixed;
-  top: -30px;
-  padding: 10px 15px 0px 20px;
-  right: 0;
-  -webkit-transition: top 0.15s ease-in-out;
-	-moz-transition: top 0.15s ease-in-out;
-	-o-transition: top 0.15s ease-in-out;
-	-ms-transition: top 0.15s ease-in-out;
-	transition: top 0.15s ease-in-out;
-  box-shadow: 0 0 10px #FFFFFF;
-  border-radius: 0 0 0 7px;
+  padding: 10px 15px;
+  left: 0;
+  bottom: 10px;
 }
-#site-links:hover {
-  top: 0;
-}
-
   #site-links .menu-link {
     color: #FFFFFF;
     display: block;
@@ -86,7 +75,7 @@ a:visited {
   }
     #site-links ul li {
       float: left;
-      margin: 0 5px 0;
+      margin: 10px;
     }
       #site-links ul li a.selected {
         color: blue;
